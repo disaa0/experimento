@@ -1,3 +1,8 @@
+##Enlaces a encuestas
+Encuesta de entrada - Global: https://docs.google.com/forms/d/15nD7ZWPgGAZU5IUdZ1n0DUyBkwmYnwQCnujfiCCtREM/edit
+
+Encuesta de salida - Sin asistencia: https://docs.google.com/forms/d/1otYIdL0ldrgaabA3xwR6R2lXaJcOpyXt_7Nfw59fo7I/edit
+
 ## Instrucciones para el experimento
 Estas son las instrucciones para crear una branch individual y subir los ejercicios desde Visual Studio Code, con un nombre clave otorgado a cada participante del experimento.
 1. Seleccionar la opción "Create Branch" en la pestaña "Source Control".
