@@ -40,8 +40,6 @@ Puede realizar el programa con interface para consola de texto o de página din�
 
 # Problematica de Python #2
 
-# Instrucciones programa con asistencia
-
 Desarrollar un programa en Python, bajo el paradigma de Objetos. La funcionalidad del programa es la siguiente:
 
 Leer el archivo estrenos.csv, generar los objetos del tipo Película y agregarlos a un diccionario, donde la llave es el mes de estreno de la película, y el valor es una lista de películas que se estrenan en ese mes. Después, ciclar ese diccionario, para desplegar mes por mes, las películas que se estrenan.
