@@ -1,3 +1,4 @@
+pass: Ur6LDHjEvvW6bn
 ## Enlaces a encuestas
 Encuesta de entrada - Global: https://forms.gle/LaarYDVf9imn4pgN7
 
