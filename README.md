@@ -18,3 +18,16 @@ Estas son las instrucciones para crear una branch individual y subir los ejercic
 - ![2023-04-19_00-22_1](https://user-images.githubusercontent.com/85775871/232935732-dd7876f9-9d04-4a2e-909f-ffbb489f0dc2.png)
 
 ¡Listo!
+
+# Problemtica de Python
+
+Realizar un programa en Python que permita listar animales por dos condiciones:
+    a) Por su clasificación o clase
+    b) Por alguna de sus características
+El programa deberá contar con un menú que permita seleccionar el listado por clase o listar por alguna característica.
+Si tiene tiempo, debe escribir un módulo que permita agregar un nuevo animal o varios animales  al listado. Al salir, se deberán grabar los cambios realizados, para que al volver a entrar al programa, no sea necesario volver a agregarlos.
+
+Es recomendable que se divida el programa en dos archivos: Un archivo de funciones auxiliares donde se encuentren las funciones que hacen todo el procesamiento y otro donde se encuentre la ejecución de la lógica principal, llamando a las funciones. 
+Hay dos archivos csv: clases.csv y zoo.csv, es necesario escribir una sola función que cargue el contenido de un archivo en un diccionario. Así la función podrá ser usada para cargar un archivo a la vez en el diccionario de clases y en el diccionario de animales.
+
+Puede realizar el programa con interface para consola de texto o de página dinámica web (Flask o Django)
