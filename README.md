@@ -25,7 +25,7 @@ Estas son las instrucciones para crear una branch individual y subir los ejercic
 
 ¡Listo!
 
-# Problemtica de Python
+# Problemtica de Python #1
 
 Realizar un programa en Python que permita listar animales por dos condiciones:
     a) Por su clasificación o clase
@@ -35,5 +35,20 @@ Si tiene tiempo, debe escribir un módulo que permita agregar un nuevo animal o 
 
 Es recomendable que se divida el programa en dos archivos: Un archivo de funciones auxiliares donde se encuentren las funciones que hacen todo el procesamiento y otro donde se encuentre la ejecución de la lógica principal, llamando a las funciones. 
 Hay dos archivos csv: clases.csv y zoo.csv, es necesario escribir una sola función que cargue el contenido de un archivo en un diccionario. Así la función podrá ser usada para cargar un archivo a la vez en el diccionario de clases y en el diccionario de animales.
+
+Puede realizar el programa con interface para consola de texto o de página dinámica web (Flask o Django)
+
+# Problematica de Python #2
+
+# Instrucciones programa con asistencia
+
+Desarrollar un programa en Python, bajo el paradigma de Objetos. La funcionalidad del programa es la siguiente:
+
+Leer el archivo estrenos.csv, generar los objetos del tipo Película y agregarlos a un diccionario, donde la llave es el mes de estreno de la película, y el valor es una lista de películas que se estrenan en ese mes. Después, ciclar ese diccionario, para desplegar mes por mes, las películas que se estrenan.
+
+El programa deberá contar con un menú que permita seleccionar el listado por clase o listar por alguna característica.
+Si tiene tiempo, debe escribir un módulo que permita agregar una o varias nuevas películas  al listado. Al salir, se deberán grabar los cambios realizados, para que al volver a entrar al programa, no sea necesario volver a agregarlos.
+
+Es recomendable que se divida el programa en dos archivos: Un archivo de funciones auxiliares donde se encuentren las funciones que hacen todo el procesamiento y otro donde se encuentre la ejecución de la lógica principal, llamando a las funciones.
 
 Puede realizar el programa con interface para consola de texto o de página dinámica web (Flask o Django)
