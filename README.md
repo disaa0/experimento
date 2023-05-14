@@ -1,35 +1,34 @@
-pass: Ur6LDHjEvvW6bn
-## Enlaces a encuestas
-Encuesta de entrada - Global: https://forms.gle/LaarYDVf9imn4pgN7
-
-Encuesta de salida - Sin asistencia: https://forms.gle/UTdMyyBmCSRMPsR86
-
 ## Instrucciones para el experimento
-Estas son las instrucciones para crear una branch individual y subir los ejercicios desde Visual Studio Code, con un nombre clave otorgado a cada participante del experimento.
-1. Seleccionar la opción "Create Branch" en la pestaña "Source Control".
-- ![2023-04-19_00-19](https://user-images.githubusercontent.com/85775871/232935046-99014cf4-d8b2-46dd-8881-9af643c46580.png)
-2. Escribir el nombre clave otorgado para cada participante. Este nombre debe ser único para cada uno, y no debe contener espacios ni caracteres especiales.
-3. Seleccionar la nueva branch creada en la lista desplegable de branches.
-- ![2023-04-19_00-19_1](https://user-images.githubusercontent.com/85775871/232935187-70cfa2d6-93c2-46c4-a05b-f1cc31581e86.png)
-4. Crear una carpeta en el directorio local del repositorio con el nombre del ejercicio a realizar.
-5. Abrir Visual Studio Code en la carpeta recién creada y crear un nuevo archivo con el nombre del ejercicio y extensión ".py" para el ejercicio en Python, o ".js" para el ejercicio en JavaScript.
-- ![2023-04-19_00-29](https://user-images.githubusercontent.com/85775871/232935666-b6cb7ee2-a634-4276-8f98-0c2449979fba.png)
-6. Escribir el código del programa en el campo de edición de texto.
-7. Guardar el archivo.
-8. Volver a la pestaña "Source Control" y hacer clic en el botón "+" para agregar los cambios al área de staging.
-- ![2023-04-19_00-21](https://user-images.githubusercontent.com/85775871/232935699-baf14f65-50bf-4e3e-8b72-a94dc770a1dc.png)
-9. Escribir un mensaje de commit breve y descriptivo en el campo de texto "Message" y hacer clic en el botón de checkmark para confirmar el commit.
-- ![2023-04-19_00-22](https://user-images.githubusercontent.com/85775871/232939140-6d068537-94bd-4a05-bccb-f2bcda0b6673.png)
-10. Hacer clic en el botón "Push"/"Publish Branch" para subir los cambios a la branch creada.
-- ![2023-04-19_00-22_1](https://user-images.githubusercontent.com/85775871/232935732-dd7876f9-9d04-4a2e-909f-ffbb489f0dc2.png)
+1. Llenar encuesta de entrada: https://forms.gle/FRD39iwwqL6d5p466
+2. Abrir GitHub Desktop.
+- ![1](https://github.com/disaa0/experimento/assets/85775871/b93db100-9452-4a27-8d18-68e3a0d226a2)
+3. Hacer click en el apartado de ``Branch`` y seleccionar ``New Branch``
+- ![2](https://github.com/disaa0/experimento/assets/85775871/584cd7cf-a55c-4667-85dd-db7b7c40eea8)
+4. Escribir el nombre clave otorgado para cada participante. Este nombre es único y no debe contener espacios ni caracteres especiales.
+5. Una vez creada la branch, hacer click en ``Open in Visual Studio Code``
+- ![4](https://github.com/disaa0/experimento/assets/85775871/efa1a9c8-b064-4872-9e93-b54da76a3c50)
+6. Crear archivo del programa en la carpeta que corresponda según el ejercicio a realizar.
+- ![5](https://github.com/disaa0/experimento/assets/85775871/43cdcfdb-8710-4cf3-994a-06d969fdf178)
+7. Escribir el código del programa en el campo de edición de texto, las instrucciones para cada programa se encuentran al final.
+8. Guardar el archivo.
+9. Volver a GitHub Desktop y hacer un Commit en la branch creada anteriormente. 
+- ![6](https://github.com/disaa0/experimento/assets/85775871/cb07f0b7-1f9e-40a8-93fd-8bde3f1307cd)
+10. Hacer clic en el botón ``Publish Branch`` para subir los cambios a la branch creada.
+- ![7](https://github.com/disaa0/experimento/assets/85775871/845b7165-3292-4a94-a26e-d1bd3f7f0541)
+11. Llenar encuesta de salida según grupo:
+- Para Grupo "Sin Asistencia": https://forms.gle/wdQKLvap6EkTKAeh7
+- Para Grupo "Con asistencia": https://forms.gle/qaarHxpdR2e86g5o8
+
 
 ¡Listo!
-
-# Problemtica de Python #1
+# Problematicas de Python
+## Ejercicio A
 
 Realizar un programa en Python que permita listar animales por dos condiciones:
-    a) Por su clasificación o clase
-    b) Por alguna de sus características
+
+- Por su clasificación o clase
+- Por alguna de sus características
+
 El programa deberá contar con un menú que permita seleccionar el listado por clase o listar por alguna característica.
 Si tiene tiempo, debe escribir un módulo que permita agregar un nuevo animal o varios animales  al listado. Al salir, se deberán grabar los cambios realizados, para que al volver a entrar al programa, no sea necesario volver a agregarlos.
 
@@ -38,7 +37,7 @@ Hay dos archivos csv: clases.csv y zoo.csv, es necesario escribir una sola funci
 
 Puede realizar el programa con interface para consola de texto o de página dinámica web (Flask o Django)
 
-# Problematica de Python #2
+## Ejercicio B
 
 Desarrollar un programa en Python, bajo el paradigma de Objetos. La funcionalidad del programa es la siguiente:
 
@@ -50,3 +49,14 @@ Si tiene tiempo, debe escribir un módulo que permita agregar una o varias nueva
 Es recomendable que se divida el programa en dos archivos: Un archivo de funciones auxiliares donde se encuentren las funciones que hacen todo el procesamiento y otro donde se encuentre la ejecución de la lógica principal, llamando a las funciones.
 
 Puede realizar el programa con interface para consola de texto o de página dinámica web (Flask o Django)
+
+# Problematicas de JavaScript
+## Ejercicio A
+Escribir una aplicación en JavaScript para evaluar una expresión aritmética. Las operaciones que puede incluir la expresión son: suma (+), resta (-), multiplicación (*) y división (/). Cuando la expresión aritmética involucra sumas, restas, multiplicaciones y/o divisiones el orden en el que se deben realizar las operaciones es:
+
+- Operaciones agrupadas en paréntesis.
+- Multiplicaciones y divisiones
+- Sumas y restas
+
+
+Si la expresión contiene algún error, la aplicación debe notificar al usuario.
