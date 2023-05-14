@@ -1,4 +1,8 @@
-## Instrucciones para el experimento
+# Reglas
+1. No esta permitido utilizar herramientas de IA para generar código.
+2. Esta permitido consultar internet.
+
+# Instrucciones para el experimento
 1. Llenar encuesta de entrada: https://forms.gle/FRD39iwwqL6d5p466
 2. Abrir GitHub Desktop.
 - ![1](https://github.com/disaa0/experimento/assets/85775871/b93db100-9452-4a27-8d18-68e3a0d226a2)
