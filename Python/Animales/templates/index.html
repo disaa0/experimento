@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Listar animales</h1>
+    <form id="formulario">
+        <label for="filtrar_por_clase">Clase</label>
+        <select name="filtrar_por_clase" id="filtrar_por_clase">
+            {% for clase in lista_clases %}
+                <option value="{{clase['Clase_id']}}">{{clase["Clase_tipo"]}}</option>
+            {% endfor %}
+        </select>
+        <label for="filtrar_por_vuelo">Vuela?</label>
+        <select name="filtrar_por_vuelo" id="filtrar_por_vuelo">
+                <option value="1">Si</option>
+                <option value="0">No</option>
+        </select>
+        <label for="filtrar_por_pelos">Es peludo?</label>
+        <select name="filtrar_por_pelos" id="filtrar_por_pelos">
+                <option value="1">Si</option>
+                <option value="0">No</option>
+        </select>
+        <label for="filtrar_por_plumas">Tiene plumas?</label>
+        <select name="filtrar_por_plumas" id="filtrar_por_plumas">
+                <option value="1">Si</option>
+                <option value="0">No</option>
+        </select>
+        <label for="filtrar_por_huevos">Pone huevos?</label>
+        <select name="filtrar_por_huevos" id="filtrar_por_huevos">
+                <option value="1">Si</option>
+                <option value="0">No</option>
+        </select>
+        <label for="filtrar_por_leche">Es capaz de producir leche?</label>
+        <select name="filtrar_por_leche" id="filtrar_por_leche">
+                <option value="1">Si</option>
+                <option value="0">No</option>
+        </select>
+        <input type="submit" value="Filtrar">
+    </form>
+    <div id="animales">
+    </div>
+    <script>
+        const cargarDatos = async () => {
+            let datos = await fetch("http://127.0.0.1:5000/animales");  
+            return datos.json();
+        };
+        window.addEventListener("load", async () => {
+            let datos = await cargarDatos();
+            contenedor = document.getElementById("animales");
+            console.log(datos);
+            for (let i = 0; i < datos.length; i++) {
+                let parrafo = document.createElement("p");
+                texto = JSON.stringify(datos[i]);
+                parrafo.textContent = texto;
+                contenedor.appendChild(parrafo);
+            }
+        });
+
+        const filtrarAnimales = (animales, datos_de_filtrado) => {
+            let listaAnimalesFiltrada = [];
+            let bandera_agregar = true;
+            for (let i = 0; i < animales.length; i++) {
+                animal = animales[i];
+                for (let caracteristica in datos_de_filtrado) {
+                    if (animal[caracteristica] !== datos_de_filtrado[caracteristica]) {
+                        bandera_agregar = false;
+                        break;
+                    }
+                }
+                if (bandera_agregar === true) {
+                    listaAnimalesFiltrada.push(animal);
+                }
+            }
+            console.log(listaAnimalesFiltrada);
+            return listaAnimalesFiltrada;
+        };
+
+
+        const formulario = document.getElementById("formulario");
+        formulario.addEventListener("submit", async (e) => {
+            e.preventDefault();
+            let valor_de_filtrado_clase = document.getElementById("filtrar_por_clase").value;
+            let valor_de_filtrado_vuela = document.getElementById("filtrar_por_vuelo").value;
+            let valor_de_filtrado_pelos = document.getElementById("filtrar_por_pelos").value;
+            let valor_de_filtrado_plumas = document.getElementById("filtrar_por_plumas").value;
+            let valor_de_filtrado_huevos = document.getElementById("filtrar_por_huevos").value;
+            let valor_de_filtrado_leche = document.getElementById("filtrar_por_leche").value;
+            // nombre_animal,pelo,plumas,huevos,leche,vuela,acuatico,depredador,dientes,espinazo,respira,venenoso,aletas,patas,cola,domestico,tamanio_gato,clase
+            let datos_de_filtrado = {
+                "clase": valor_de_filtrado_clase,
+                "vuela": valor_de_filtrado_vuela,
+                "pelo": valor_de_filtrado_pelos,
+                "plumas": valor_de_filtrado_plumas,
+                "huevos": valor_de_filtrado_huevos,
+                "leche": valor_de_filtrado_leche
+            };
+            let datos = await cargarDatos();
+            let listaAnimalesFiltrada = filtrarAnimales(datos, datos_de_filtrado);
+            let texto = "";
+            contenedor = document.getElementById("animales");
+            contenedor.textContent = "";
+            for (let i = 0; i < listaAnimalesFiltrada.length; i++) {
+                let parrafo = document.createElement("p");
+                texto = JSON.stringify(listaAnimalesFiltrada[i]);
+                parrafo.textContent = texto;
+                contenedor.appendChild(parrafo);
+            }
+        });
+    </script>
+</body>
+</html>
