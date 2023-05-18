@@ -57,9 +57,4 @@ def registrarPelicula():
 
 if __name__ == '__main__':
     app.run(debug=True)
-    despliegues = {
-        'titulo': basePeliculas.buscarPorTitulo,
-        'sinopsis': basePeliculas.buscarPorSinopsis,
-        'mes': basePeliculas.buscarPorMes
-    }
 
