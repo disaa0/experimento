@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar peliculas</title>
+</head>
+<body>
+    <h2>Registro de peliculas</h2>
+    <form action="/registrar-pelicula" method="POST">
+        <label for="titulo">Titulo</label>
+        <input type="text" name="titulo" id="titulo">
+        <br>
+        <label for="titulo">Titulo Original</label>
+        <input type="text" name="titulo_original" id="titulo">
+        <br>
+        <label for="url_imagen">URL de la imagen</label>
+        <input type="text" name="url_imagen" id="url_imagen">
+        <br>
+        <label for="fecha_estreno">Fecha de estreno</label>
+        <input type="date" name="fecha_estreno" id="fecha_estreno">
+        <br>
+        <label for="sinopsis">Sinopsis</label>
+        <textarea name="sinopsis" id="sinopsis" cols="30" rows="10"></textarea>
+        <br>
+        <input type="submit" value="Registrar">
+    </form>
+</body>
+</html>
