@@ -92,3 +92,5 @@ nombre_animal,pelo,plumas,huevos,leche,vuela,acuatico,depredador,dientes,espinaz
 "avispa",1,0,1,0,1,0,0,0,0,1,1,0,6,0,0,0,6
 "lobo",1,0,0,1,0,0,1,1,1,1,0,0,4,1,0,1,1
 reyezuelo,0,1,1,0,1,0,0,0,1,1,0,0,2,1,0,0,2
+perro,1,0,0,1,0,0,0,1,0,1,0,0,4,1,1,1,1
+gato,1,0,0,1,0,0,1,1,0,1,0,0,4,1,1,1,1
