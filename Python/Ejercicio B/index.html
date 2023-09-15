@@ -1,0 +1,14 @@
+<div>
+    <div>
+        <h1>Peliculas</h1>
+            <ul>
+                {%for titulo,titulo_original,url_imagen,fecha_estreno,sinopsis%}
+                <li>
+                    <h2>{{titulo}}</h2>
+                    <h3>{{titulo_original}}</h3>
+                    <img src="{{url_imagen}}" alt="{{titulo}}">
+                    <p>{{fecha_estreno}}</p>
+                    <p>{{sinopsis}}</p>
+            </ul>
+    </div>
+</div>
