@@ -37,4 +37,5 @@ df_mes = df[df['fecha_estreno'].str.contains(f'-{mes:02d}-')]
 if df_mes.empty:
     print('No hay estrenos en este mes')
 else:
+    print('Estrenos en el mes seleccionado')
     print(df_mes)
