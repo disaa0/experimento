@@ -53,7 +53,7 @@ function App() {
               pattern: {
                 value: /^[\d\+\-\*\/\(\)\s]+$/,
                 message:
-                  "La expresión solo puede contener números y los caracteres +, -, * y /.",
+                  "La expresión solo puede contener números y los caracteres +, -, *, / y paréntesis.",
               },
             })}
             className="rounded-sm bg-gray-600 p-2"
