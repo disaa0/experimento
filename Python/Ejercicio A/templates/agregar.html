@@ -1,0 +1,33 @@
+<h1>Agregar un animal</h1>
+<form action="" method="post">
+
+
+	{% for col in zoo[0] %}
+	{% if col == 'nombre_animal' %}
+	<label for="nombre_animal">Nombre de animal:</label>
+	<input type="text" id="nombre_animal" name="nombre_animal"><br>
+	{% elif col == 'patas' %}
+	<label for="patas">Numero de patas:</label>
+	<input type="number" id="patas" name="patas"><br>
+	{% elif col == 'clase' %}
+	<label for="clase">Seleccione la clase:</label>
+	<select name="clase" id="clase">
+		{% for dic in clases %}
+
+		<option value="{{dic['Clase_id']}}">{{dic['Clase_tipo']}}</option>
+
+		{% endfor %}
+	</select><br>
+	{% else %}
+	<div>
+		<label>Seleccione si el animal cumple con la caracteristica {{col}}:</label><br>
+		<input type="radio" id="pelo" name="{{col}}" value="1">
+		<label>Si</label><br>
+		<input type="radio" id="css" name="{{col}}" value="0">
+		<label>No</label><br>
+	</div>
+	{% endif %}
+	{% endfor %}
+
+	<input type="submit" value="Submit">
+</form>

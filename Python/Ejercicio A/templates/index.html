@@ -1,0 +1,77 @@
+<style>
+	.dropdown {
+		position: relative;
+		display: inline-block;
+	}
+
+	.dropdown-content {
+		display: none;
+		position: absolute;
+		background-color: #f9f9f9;
+		min-width: 160px;
+		box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+		padding: 12px 16px;
+		z-index: 1;
+	}
+
+	.dropdown:hover .dropdown-content {
+		display: block;
+	}
+</style>
+<div class="dropdown">
+	<span>Filtrar tabla por clase</span>
+	<div class="dropdown-content">
+		<ul>
+			{% for dic in clases %}
+			<li>
+
+				<a href="/{{dic['Clase_id']}}">{{dic['Clase_tipo']}}</a>
+
+			</li>
+			{% endfor %}
+		</ul>
+	</div>
+</div>
+<div class="dropdown">
+	<span>Filtrar tabla por caracteristica</span>
+	<div class="dropdown-content">
+		<ul>
+			{% for key in lista[0] %}
+
+			{% if key == 'clase' %}
+
+			{% else %}
+			<li>
+
+				<a href="/{{key}}">{{key}}</a>
+
+			</li>
+			{% endif %}
+			{% endfor %}
+
+		</ul>
+	</div>
+</div>
+
+<a href="/agregar">Agregar</a>
+
+<table>
+
+	<tr>
+		{% for key in lista[0] %}
+		<th>{{key}}</th>
+		{% endfor %}
+	</tr>
+
+	{% for dic in lista %}
+	<tr>
+
+		{% for val in dic.values() %}
+		<td>{{val}}</td>
+
+
+		{% endfor %}
+
+	</tr>
+	{% endfor %}
+</table>
