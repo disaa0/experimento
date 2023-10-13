@@ -1,5 +1,5 @@
 import csv
-from funciones import mostrardatos,mostrardatosanimales,Clase
+from funciones import mostrardatos,mostrardatosanimales,Clase, Caracteristica
 if __name__ == "__main__":
     print("Por favor dime como quieres mostrar el listado")
     print("1. Por clase")
@@ -26,7 +26,12 @@ if int(Seleccion)==1:
 
    
 elif int(Seleccion)==2:
-    pass
+    print("Ingrese la caracteristica ")
+    caracteristica = input()
+    animales_caracterisiticas= Caracteristica(datos_animales, caracteristica)
+    print(f"Resultados de la búsqueda '{caracteristica}':")
+    for animal in animales_caracterisiticas:
+         print(f"Nombre: {animal['nombre_animal']}")
 else:
     print("Selecciona una opcion de las antes mencionadas")
 

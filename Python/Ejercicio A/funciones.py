@@ -25,8 +25,12 @@ def Clase(Infoanimal,Idanimal):
         if int(animal['clase']) == Idanimal:
             resultado.append(animal)
     return resultado
-def Caracteristica():
-    pass
+def Caracteristica(Infoanimal,Caracteristica):
+    resultado = []
+    for animal in Infoanimal.values():
+        if int(animal[Caracteristica]) == 1:
+            resultado.append(animal)
+    return resultado
 
 def AgregarAnimal():
     pass
