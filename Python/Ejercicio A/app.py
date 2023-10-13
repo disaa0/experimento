@@ -1,11 +1,17 @@
 import csv
+from funciones import lee_archivo_csv
+if __name__ == "__main__":
+    print("Por favor dime como quieres mostrar el listado")
+    print("1. Por clase")
+    print("2. Por alguna caracteristicas")
+    print("3. Agregar un nuevo animal")
+    print("Por favor proporciona el numero de tu eleccion")
+    Seleccion=input()
+    
+    
+    
+    
 
-print("Por favor dime como quieres mostrar el listado")
-print("1. Por clase")
-print("2. Por alguna caracteristicas")
-print("3. Agregar un nuevo animal")
-print("Por favor proporciona el numero de tu eleccion")
-Seleccion=input()
 
 if int(Seleccion)==1:
     pass
@@ -24,3 +30,4 @@ def Caracteristica():
 
 def AgregarAnimal():
     pass
+
