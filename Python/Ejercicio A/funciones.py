@@ -1,24 +1,30 @@
-import csv
-def lee_archivo_csv(archivo:str)->list:
-    '''
-    Lee un archivo csv y regresa una lista de renglones 
-    (y campos dentro de los renglones)
-    '''
-    lista = []
-    try:
-        with open(archivo,"r",encoding="utf-8") as fh: #fh: file handle
-            csv_reader = csv.reader(fh)
-            for linea in csv_reader:
-                lista.append(linea)
-    except IOError:
-        print(f"No se pudo abrir el archivo {archivo}")
-    
-    return lista
+import csv 
+def mostrardatos(Archivo):
 
-def Clase():
-    pass
+    datos = {}
+    with open(Archivo, mode='r', newline='', encoding='utf-8') as archivo:
+         lector_csv = csv.DictReader(archivo)
+         for fila in lector_csv:
+           fila['Clase_id'] = int(fila['Clase_id'])
+           datos[fila['Clase_id']] = str(fila['Clase_tipo'])
+    return datos
 
 
+def mostrardatosanimales(Archivo):
+    datos = {}
+    with open(Archivo, mode='r', newline='', encoding='utf-8') as archivo:
+        lector_csv = csv.DictReader(archivo)
+        for fila in lector_csv:
+            datos[fila['nombre_animal']] = fila
+    return datos
+
+def Clase(Infoanimal,Idanimal):
+
+    resultado = []
+    for animal in Infoanimal.values():
+        if int(animal['clase']) == Idanimal:
+            resultado.append(animal)
+    return resultado
 def Caracteristica():
     pass
 

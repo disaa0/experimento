@@ -1,5 +1,5 @@
 import csv
-from funciones import lee_archivo_csv
+from funciones import mostrardatos,mostrardatosanimales,Clase
 if __name__ == "__main__":
     print("Por favor dime como quieres mostrar el listado")
     print("1. Por clase")
@@ -7,25 +7,24 @@ if __name__ == "__main__":
     print("3. Agregar un nuevo animal")
     print("Por favor proporciona el numero de tu eleccion")
     Seleccion=input()
-    listaclases= lee_archivo_csv("Python/Ejercicio A/clases.csv")
-    listazoo= lee_archivo_csv("Python/Ejercicio A/zoo.csv")
-    for lista in listaclases:
-
-        print(listaclases[lista])
-    print(listazoo)
-    
-    
-with open('Python/Ejercicio A/clases.csv') as file:
-    csv_reader = csv.DictReader(file, delimiter=',')
-
-    for row in csv_reader:
-        claseid = row['Clase_id']
-        clase_tipo = row['Clase_tipo']
-        print('El id de la clase es:', claseid)
-        print('El tipo de la clase es:',clase_tipo)
-
+    #listazoo= mostrardatos()
+infoclases=mostrardatos('Python/Ejercicio A/clases.csv')
+datos_animales = mostrardatosanimales('Python/Ejercicio A/zoo.csv')
 if int(Seleccion)==1:
-    pass
+    print("las clases existentes son:")
+    infoclases=mostrardatos('Python/Ejercicio A/clases.csv')
+    print("Ingrese el id de la clase")
+    Id_clase=int(input())
+    if Id_clase in infoclases:
+            clase_tipo = infoclases.get(Id_clase)
+            animales = (datos_animales, Id_clase)
+            print(f"Animales de la clase '{clase_tipo}':")
+            for animal in animales:
+                print(f"Nombre: {animal['nombre_animal']}")
+    else:
+            print("Intenta con otro Id")
+
+   
 elif int(Seleccion)==2:
     pass
 else:
