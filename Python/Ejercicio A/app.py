@@ -4,7 +4,7 @@ if __name__ == "__main__":
     print("Por favor dime como quieres mostrar el listado")
     print("1. Por clase")
     print("2. Por alguna caracteristicas")
-    print("3. Agregar un nuevo animal")
+   # print("3. Agregar un nuevo animal") en proceso
     print("Por favor proporciona el numero de tu eleccion")
     Seleccion=input()
     #listazoo= mostrardatos()
