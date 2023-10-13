@@ -14,3 +14,13 @@ def lee_archivo_csv(archivo:str)->list:
         print(f"No se pudo abrir el archivo {archivo}")
     
     return lista
+
+def Clase():
+    pass
+
+
+def Caracteristica():
+    pass
+
+def AgregarAnimal():
+    pass
