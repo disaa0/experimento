@@ -3,6 +3,7 @@ import csv
 print("Por favor dime como quieres mostrar el listado")
 print("1. Por clase")
 print("2. Por alguna caracteristicas")
+print("3. Agregar un nuevo animal")
 print("Por favor proporciona el numero de tu eleccion")
 Seleccion=input()
 
@@ -19,4 +20,7 @@ class Clase():
 
 
 class Caracteristica():
+    pass
+
+class AgregarAnimal():
     pass
