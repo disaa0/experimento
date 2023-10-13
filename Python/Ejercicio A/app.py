@@ -15,12 +15,12 @@ else:
     print("Selecciona una opcion de las antes mencionadas")
 
 
-class Clase():
+def Clase():
     pass
 
 
-class Caracteristica():
+def Caracteristica():
     pass
 
-class AgregarAnimal():
+def AgregarAnimal():
     pass
